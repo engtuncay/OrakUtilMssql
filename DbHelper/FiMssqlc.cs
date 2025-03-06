@@ -7,23 +7,23 @@ using System.Data.Common;
 
 namespace OrakUtilMssql.DbHelper
 {
-    public class FiMssqlCore
+    public class FiMssqlc
     {
-        protected string ConnectionString { get; set; }
+        protected string connString { get; set; }
 
-        public FiMssqlCore()
+        public FiMssqlc()
         {
         }
 
-        public FiMssqlCore(string connectionString)
+        public FiMssqlc(string connString)
         {
-            Console.WriteLine(connectionString);
-            this.ConnectionString = connectionString;
+            //Console.WriteLine(connString);
+            this.connString = connString;
         }
 
         public SqlConnection GetConnection()
         {
-            SqlConnection connection = new SqlConnection(this.ConnectionString);
+            SqlConnection connection = new SqlConnection(this.connString);
             if (connection.State != ConnectionState.Open)
                 connection.Open();
             return connection;
