@@ -24,8 +24,7 @@ namespace OrakUtilMssql.DbHelper
         public SqlConnection GetConnection()
         {
             SqlConnection connection = new SqlConnection(this.connString);
-            if (connection.State != ConnectionState.Open)
-                connection.Open();
+            if (connection.State != ConnectionState.Open) connection.Open();
             return connection;
         }
 
