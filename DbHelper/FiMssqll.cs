@@ -6,15 +6,15 @@ using System.Data.Common;
 
 namespace OrakUtilMssql.DbHelper
 {
-  public class FiMssqlc
+  public class FiMssqll
   {
     protected string connString { get; set; }
 
-    public FiMssqlc()
+    public FiMssqll()
     {
     }
 
-    public FiMssqlc(string connString)
+    public FiMssqll(string connString)
     {
       //Console.WriteLine(connString);
       this.connString = connString;
